@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 4 && JQuery-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <title>ABSAUTO</title>
+</head>
+<body>
+    <div id="app">
+        <h1 class="app_item app_header text-center">Отчеты</h1>
+        <div class="app_item app_load ">
+            <form class="border">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="app_load-file" required>
+                    <label class="custom-file-label" for="app_load-file">Выберите файл</label>
+                </div>
+                <div class="app_load-btn text-center">
+                    <input type="button" class="btn btn-primary ap-act app-action_upload" value="Загрузить">
+                </div>
+            </form>
+        </div>
+        <div class="app_item app_reports">
+            <div class="app_reports-filters">
+                <div class="app_reports-filters-actions">
+                    <button type="button" class="btn btn-outline-primary ap-act app-action_lasthours qweqwe asdasd">Товары за последние 3 ч.</button>
+                    <button type="button" class="btn btn-outline-primary ap-act app-action_midprice">Средняя цена товара за сутки</button>
+                    <button type="button" class="btn btn-outline-primary ap-act app-action_interval">Товары с миним. ценой за промежуток</button>
+                </div>
+                <div class="app_reports-filters-info"></div>
+            </div>
+            <div class="app_reports-results">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Название</th>
+                            <th>Цена</th>
+                        </tr>
+                    </thead>
+                    <tbody class="app_reports-results-table"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="public/app.js"></script>
+
+    <script>
+        /**
+         * Нужный экшн сам повесится в зависимости от класса кнопки
+         */
+        $('.ap-act').on('click', function() {
+            app.bindAction(this);
+        });
+    </script>
+</body>
+</html>

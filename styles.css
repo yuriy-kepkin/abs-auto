@@ -1,0 +1,43 @@
+body {
+    width: 800px;
+    margin: 100px auto;
+}
+
+.app_item {
+    margin: 10px 0px;
+}
+
+.app_load {
+    padding: 6px;
+}
+
+.app_load form {
+    width: 400px;
+    margin: auto;
+    padding: 6px;
+}
+
+.app_load-btn {
+    margin-top: 10px;
+}
+
+.app_reports-filters, .app_reports-results {
+    margin: 16px 0px;
+}
+
+.app_reports-filters-info {
+    margin: 24px 0px;
+}
+
+.app_reports-filters-info span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.app_reports-filters-info .date-filter {
+    margin-bottom: 10px;
+}
+
+.date-filter input {
+    width: 120px !important;
+}
